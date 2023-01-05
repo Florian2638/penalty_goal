@@ -10,3 +10,52 @@ body{
     
 
 }
+.gardien_centre{
+    position: absolute;
+    left: 43%;
+    top:35% ;
+    width: 15rem;
+}
+.gardien_gauche{
+    position: absolute;
+    width: 15rem;
+    top:25%;
+    left: 30%;
+}
+.gardien_droite{
+    position: absolute;
+    width: 17rem;
+    top:27%;
+    left: 57%;
+}
+.NomJoueur{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    font-size: xx-large;
+    
+}
+.Score{
+    display: flex;
+    justify-content: end;
+    margin-right: 8rem;
+    font-size: xx-large;
+    color: white;
+    margin-top: -4rem ;
+    
+}
+.NomJoueur>p{
+    background-color: rgba(255, 0, 0, 0.39);
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+.Score>p{
+    background-color: rgba(255, 0, 0, 0.39);
+    padding: 20px;
+    padding-left: 32px;
+    border-radius: 0px 0px 10px 10px;
+    
+    
+}
