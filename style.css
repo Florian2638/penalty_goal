@@ -10,3 +10,49 @@ body{
     
 
 }
+
+.ballon_fleche {
+position: absolute;
+left: 38%;
+top: 70%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+}
+
+
+
+.fleche{
+    height: 100%;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    
+}
+
+.ballon_cage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20rem;
+    gap: 15rem;
+}
+
+.ballon{
+    width: 5rem;
+}
+
+.flechegauche{
+    width: 5rem;
+}
+
+
+.flechedroite{
+    width: 5rem;
+}
+
+.flechecentre{
+    width: 5rem;
+}
