@@ -165,7 +165,7 @@ function checkIfGoal(isGoal){
         },3000)
     }
 
-    if(countGoal == 1 || countSave == 1){
+    if(countGoal == 5 || countSave == 5){
         console.log('Fini')
         setTimeout(function() {
             resultat()
@@ -202,7 +202,7 @@ function nomJoueur(){
 }
 
 function resultat(){
-    if(countGoal == 1){
+    if(countGoal == 5){
         win.style.display = 'block'
         victory.style.display ='block'
         gardienCentre.style.display = 'none'
@@ -211,7 +211,7 @@ function resultat(){
         ballons.forEach(bl => bl.style.display = 'none')
         siuuSound.play()
         
-    }else if(countSave == 1){
+    }else if(countSave == 5){
         croixRouge.style.display = 'block'
         gameOver.style.display = 'block'
         gardienCentre.style.display = 'none'
