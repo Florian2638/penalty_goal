@@ -37,8 +37,12 @@ gap: 2rem;
     flex-direction: row;
     justify-content: center;
     margin-top: 10rem;
-    gap: 12rem;
+    gap: 20rem;
  
+}
+
+#ballon_Centre{
+    margin-top: 12rem;
 }
 
 .ballon_cage>div {
@@ -105,7 +109,18 @@ gap: 2rem;
     padding: 10px;
     border-radius: 10px 10px 0px 0px;
 }
-.Score>p{
+.NomJoueur>div>p{
+    background-color: rgba(255, 0, 0, 0.39);
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.NomJoueur>div{
+    display: flex;
+    gap: 30px;
+}
+
+.Score p{
     background-color: rgba(255, 0, 0, 0.39);
     padding: 20px;
     padding-left: 32px;
