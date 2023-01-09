@@ -151,3 +151,35 @@ gap: 2rem;
     width: 299px;
     display: none;
   }
+
+  .win{
+      position: absolute;
+      bottom: 10px;
+      width: 300px;
+      right: 52rem;
+      display: none;
+  }
+
+  .victory{
+      position: absolute;
+      width: 35rem;
+      right: 44rem;
+      top: 10rem;
+      display: none;
+  }
+
+  .croixRouge{
+    position: absolute;
+    bottom: 5rem;
+    width: 300px;
+    right: 52rem;
+    display: none;
+  }
+
+  .gameOver{
+    position: absolute;
+    width: 85rem;
+    right: 18rem;
+    top: 5rem;
+    display: none;
+  }

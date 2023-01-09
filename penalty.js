@@ -132,6 +132,13 @@ const saveScore = document.querySelector('.Score2')
 let rateSound = new Audio('audio/rate.mp3')
 console.log(rateSound)
 let goalSound = new Audio('audio/goal.mp3')
+let looseSound = new Audio('audio/defaiteSound.mp3')
+let siuuSound = new Audio('audio/siuu.mp3')
+
+let win = document.querySelector('.win')
+let victory = document.querySelector('.victory')
+let croixRouge = document.querySelector('.croixRouge')
+let gameOver = document.querySelector('.gameOver')
 
 
 let countGoal = 0;
@@ -158,12 +165,16 @@ function checkIfGoal(isGoal){
         },3000)
     }
 
-    if(countGoal ==5 || countSave == 5){
+    if(countGoal == 1 || countSave == 1){
         console.log('Fini')
         setTimeout(function() {
-            resetGame()
+            resultat()
 
+        }, 2000)
+        setTimeout(function() {
+            resetGame()
         },3000)
+        
         
     }
 } 
@@ -172,17 +183,43 @@ function resetGame(){
     countGoal = 0
     countSave = 0
     goalScore.textContent = 'Goal : ' + countGoal;
-    saveScore.textContent = 'Raté : ' + countSave; 
+    saveScore.textContent = 'Raté : ' + countSave;
+    croixRouge.style.display = 'none'
+    gameOver.style.display = 'none'
+    win.style.display = 'none'
+    victory.style.display ='none'
     nomJoueur()
+    
+    
+    
+    
 }
 
 function nomJoueur(){
     const playerName = document.querySelector('.Nom')
     const name = window.prompt('Entrez votre nom')
     playerName.textContent = name;
-    
+}
 
-
+function resultat(){
+    if(countGoal == 1){
+        win.style.display = 'block'
+        victory.style.display ='block'
+        gardienCentre.style.display = 'none'
+        gardienDroite.style.display = 'none'
+        gardienGauche.style.display = 'none'
+        ballons.forEach(bl => bl.style.display = 'none')
+        siuuSound.play()
+        
+    }else if(countSave == 1){
+        croixRouge.style.display = 'block'
+        gameOver.style.display = 'block'
+        gardienCentre.style.display = 'none'
+        gardienDroite.style.display = 'none'
+        gardienGauche.style.display = 'none'
+        ballons.forEach(bl => bl.style.display = 'none')
+        looseSound.play()
+    }
 }
 
 resetGame()
