@@ -128,16 +128,34 @@ function tireDroite(){
 const goalScore = document.querySelector('.Score1')
 const saveScore = document.querySelector('.Score2')
 
+
+let rateSound = new Audio('audio/rate.mp3')
+console.log(rateSound)
+let goalSound = new Audio('audio/goal.mp3')
+
+
 let countGoal = 0;
 let countSave = 0;
 function checkIfGoal(isGoal){
     
     if(isGoal) {
         countGoal++;
-        goalScore.textContent = 'Goal : ' + countGoal; 
+        goalScore.textContent = 'Goal : ' + countGoal;
+        document.querySelector('.goal').style.display = 'block'
+        goalSound.play()
+        setTimeout(function() {
+            document.querySelector('.goal').style.display = 'none'
+
+        },3000)
     } else {
         countSave++;
         saveScore.textContent = 'Raté : ' + countSave;
+        document.querySelector('.rate').style.display = 'block'
+        rateSound.play()
+        setTimeout(function() {
+            document.querySelector('.rate').style.display = 'none'
+
+        },3000)
     }
 
     if(countGoal ==5 || countSave == 5){

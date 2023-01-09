@@ -143,3 +143,11 @@ gap: 2rem;
     opacity: 0.7;
     cursor: pointer;
 }
+
+.goal, .rate {
+    position: absolute;
+    top: 462px;
+    right: 164px;
+    width: 299px;
+    display: none;
+  }
